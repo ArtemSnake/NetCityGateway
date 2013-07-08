@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Methods";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+   FIELDSET {
+    padding: 10px; /* Поля вокруг группы */
+   }
+</style>
+<h2>Methods</h2>
+@using (Html.BeginForm("Methods","Home",FormMethod.Post, new {@class="form-horizontal", id="MainForm"}))
+{
+        <div class="control-group" id="methodSelect_container">
+            <label class="control-label" for="methodSelect">Метод:</label>
+            <div class="controls">
+                @Html.DropDownList("methodSelect", new List<SelectListItem>()
+                                                       {
+                                                           new SelectListItem(){Text = "Test",Value = "0",Selected = true},
+                                                           new SelectListItem(){Text = "GetTimeTable",Value = "1"},
+                                                           new SelectListItem(){Text = "GetHomeWork",Value = "2"},
+                                                           new SelectListItem(){Text = "GetClasses",Value = "3"},
+                                                           new SelectListItem(){Text = "GetEducationalInstitutions",Value = "4"},
+                                                           new SelectListItem(){Text = "GetAnnouncement",Value = "5"}
+                                                       })
+            </div>
+        </div>
+        <div class="control-group" id="versionSelect_container">
+            <label class="control-label" for="versionSelect">Версия:</label>
+            <div class="controls">
+                @Html.DropDownList("versionSelect", new List<SelectListItem>()
+                                                       {
+                                                           new SelectListItem(){Text = "1",Value = "0",Selected = true}
+                                                       })
+            </div>
+        </div>
+    <div class="control-group" id="responseFormatSelect_container">
+        <label class="control-label" for="responseFormatSelect">Формат ответа:</label>
+        <div class="controls">
+                @Html.DropDownList("responseFormatSelect", new List<SelectListItem>()
+                                                       {
+                                                           new SelectListItem(){Text = "XML",Value = "0",Selected = true},
+                                                           new SelectListItem(){Text = "JSON",Value = "1"}
+                                                       })
+        </div>
+    </div>
+    <div class="control-group" id="dateFormatSelect_container">
+    </div>
+    <div class="control-group" id="Is_Fomat_Result_Id_container">
+        <div class="controls">
+            <label class="checkbox">
+                <input id="Is_Fomat_Result_Id" type="checkbox" value="" checked="checked" />Форматировать результат
+            </label>
+        </div>
+    </div>
+
+<!-- КОНТЕКСТНО ЗАВИСИМЫЕ HTML ЕЛЕМЕНТЫ НАЧАЛО -->
+    <div class="control-group" id="parameters_container">
+    </div>
+    <div style="padding-left: 70px">
+        <div class="control-group" id="educInst_container">
+        </div>
+
+        <div class="control-group" id="class_container">
+        </div>
+
+        <div class="control-group" id="date_container">
+        </div>
+
+        <div class="control-group" id="endDate_container">
+        </div>
+
+        <div class="control-group" id="subShort_container">
+        </div>
+
+        <div class="control-group" id="room_container">
+        </div>
+
+        <div class="control-group" id="teacher_container">
+        </div>
+        
+        <div class="control-group" id="educFilter_container">
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+    </div>
+<!-- КОНТЕКСТНО ЗАВИСИМЫЕ HTML ЕЛЕМЕНТЫ КОНЕЦ -->
+}
