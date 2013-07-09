@@ -5,6 +5,7 @@
         var versCount = versnSelectEl.children().length;//GET <option></option> LIST
         switch (methodId) {
             case "0":
+                $("#Main").attr("action", "/Home/Test");
                 $("#parameters_container").empty();
                 $("#educInst_container").empty();
                 $("#class_container").empty();
@@ -21,6 +22,7 @@
                 }
                 break;
             case "1":
+                $("#Main").attr("action", "/Home/GetTimeTable");
                 $("#room_container").empty();
                 $("#teacher_container").empty();
                 $("#subShort_container").empty();
@@ -63,6 +65,7 @@
                 }
                 break;
             case "2":
+                $("#Main").attr("action", "/Home/GetHomeWork");
                 $("#room_container").empty();
                 $("#teacher_container").empty();
                 $("#educFilter_container").empty();
@@ -101,6 +104,7 @@
                 }
                 break;
             case "3":
+                $("#Main").attr("action", "/Home/GetClasses");
                 $("#class_container").empty();
                 $("#date_container").empty();
                 $("#endDate_container").empty();
@@ -121,6 +125,7 @@
                 }
                 break;
             case "4":
+                $("#Main").attr("action", "/Home/GetEducationalInstitutions");
                 $("#parameters_container").empty();
                 $("#educInst_container").empty();
                 $("#class_container").empty();
@@ -142,6 +147,7 @@
                 }
                 break;
             case "5":
+                $("#Main").attr("action", "/Home/GetAnnouncement");
                 $("#parameters_container").empty();
                 $("#class_container").empty();
                 $("#endDate_container").empty();

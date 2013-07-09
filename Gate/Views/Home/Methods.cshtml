@@ -13,7 +13,7 @@
    }
 </style>
 <h2>Methods</h2>
-@using (Ajax.BeginForm("GetResponse","Home",ajaxOptions))
+@using (Ajax.BeginForm("Test",null,ajaxOptions, new {id="Main"}))
 {
         <div class="control-group" id="methodSelect_container">
             <label class="control-label" for="methodSelect">Метод:</label>

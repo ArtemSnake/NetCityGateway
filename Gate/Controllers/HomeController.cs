@@ -20,9 +20,15 @@ namespace Gate.Controllers
 		}
 
 		[HttpPost]
-		public PartialViewResult GetResponse()
+		public PartialViewResult GetResponse(int methodId)
 		{
 			return PartialView("GetResponse","Heeloo Kitty");
+		}
+
+		[HttpPost]
+		public PartialViewResult Test()
+		{
+			return PartialView();
 		}
 
 		/// <summary>

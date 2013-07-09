@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Gate
 {
-	enum MethodValues
+	public enum Method
 	{
 		Test = 0,
 		GetTimeTable = 1,

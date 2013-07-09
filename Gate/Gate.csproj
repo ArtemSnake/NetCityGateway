@@ -41,7 +41,7 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>libs\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,11 +106,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Form.cs" />
-    <Compile Include="Models\FormViewModel.cs" />
-    <Compile Include="Models\Method.cs" />
-    <Compile Include="Models\ResponseFormat.cs" />
-    <Compile Include="Models\Version.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -463,12 +458,11 @@
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Home\Methods.cshtml" />
     <Content Include="Views\Home\GetResponse.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Common.resx">
