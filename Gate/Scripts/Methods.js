@@ -14,7 +14,6 @@
                 $("#teacher_container").empty();
                 $("#subShort_container").empty();
                 $("#educFilter_container").empty();
-                $("#dateFormatSelect_container").empty();
                 if (versCount > 1) {
                     versnSelectEl.empty();
                     var availableVersn = HtmlHelper.getElement("option", { "value": "0"},"1");//for test method available 1 versn method.
@@ -26,7 +25,6 @@
                 $("#teacher_container").empty();
                 $("#subShort_container").empty();
                 $("#educFilter_container").empty();
-                $("#dateFormatSelect_container").empty();
                 if (versCount != 3) {
                     versnSelectEl.empty();
                     var versnArr = [
@@ -68,7 +66,6 @@
                 $("#room_container").empty();
                 $("#teacher_container").empty();
                 $("#educFilter_container").empty();
-                $("#dateFormatSelect_container").empty();
                 if (versCount > 1) {
                     versnSelectEl.empty();
                     var availableVersn = HtmlHelper.getElement("option", { "value": "0" }, "1");//for test method available 1 versn method.
@@ -111,7 +108,6 @@
                 $("#teacher_container").empty();
                 $("#subShort_container").empty();
                 $("#educFilter_container").empty();
-                $("#dateFormatSelect_container").empty();
                 if (versCount > 1) {
                     versnSelectEl.empty();
                     var availableVersn = HtmlHelper.getElement("option", { "value": "0" }, "1");//for test method available 1 versn method.
@@ -134,7 +130,6 @@
                 $("#teacher_container").empty();
                 $("#subShort_container").empty();
                 $("#educFilter_container").empty();
-                $("#dateFormatSelect_container").empty();
                 if (versCount != 2) {
                     versnSelectEl.empty();
                     var versnArr = [
@@ -154,7 +149,6 @@
                 $("#teacher_container").empty();
                 $("#subShort_container").empty();
                 $("#educFilter_container").empty();
-                $("#dateFormatSelect_container").empty();
                 if (versCount > 1) {
                     versnSelectEl.empty();
                     var availableVersn = HtmlHelper.getElement("option", { "value": "0" }, "1");//for test method available 1 versn method.
@@ -186,7 +180,6 @@
                 if (versnId == 0 || versnId == 2) {
                     $("#room_container").empty();
                     $("#teacher_container").empty();
-                    $("#dateFormatSelect_container").empty();
                 }
                 if (versnId == 1) {
                     if ($("#room").length != 1) {
@@ -201,7 +194,6 @@
                 if (versnId == 0) {
                     $("#parameters_container").empty();
                     $("#educFilter_container").empty();
-                    $("#dateFormatSelect_container").empty();
                 } else {
                     if ($("#educFilter").length != 1) {
                         RenderFormHelper.renderEducFilterContainer_content();

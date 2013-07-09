@@ -41,7 +41,7 @@ FilterCreator = {
 		var controlsDiv = HtmlHelper.getElement("div", { "class": "controls" });
 		var helpSpan = HtmlHelper.getElement("span", { "class": "help-block" });
 		var small = HtmlHelper.getElement("small", null, helpText);
-		var input = HtmlHelper.getElement("input", { "id": id, "name": id, "type": "text" });
+		var input = HtmlHelper.getElement("input", { "id": id, "name": id, "type": "text", "required":"true"});
 		helpSpan.append(small);//<span><small>...</small></span>
 		controlsDiv.append(input);
 		controlsDiv.append(helpSpan);
@@ -104,7 +104,7 @@ RenderFormHelper = {
 	    }
 	},
     renderDateFormatContainer_content: function() {
-        var content = FilterCreator.getContentInputFilter("dateFormatSelect", "Формат даты::", "");
+        var content = FilterCreator.getContentInputFilter("dateFormatSelect", "Формат даты:", "");
         for (var i = 0; i < content.length; i++) {
             $("#dateFormatSelect_container").append(content[i]);
         }

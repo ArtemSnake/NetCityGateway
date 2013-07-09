@@ -46,13 +46,7 @@ namespace Gate.Controllers
 
 		public ActionResult Methods()
 		{
-			FormViewModel model=new FormViewModel()
-				                    {
-										Methods = _methods,
-										Versions = _versions,
-										ResponseFormats = _responseFormats,
-				                    };
-			return View(model);
+			return View();
 		}
 
 		/// <summary>
