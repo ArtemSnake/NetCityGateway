@@ -20,6 +20,9 @@
 			case "span":
 				element = $("<span></span>");
 				break;
+			case "select":
+				element = $("<select></select>");
+				break;
 			default:
 				break;
 		}
@@ -45,6 +48,21 @@ FilterCreator = {
 		helpSpan.append(small);//<span><small>...</small></span>
 		controlsDiv.append(input);
 		controlsDiv.append(helpSpan);
+		return [label, controlsDiv];
+	},
+	getContentSelectFilter: function (id, title) {
+		var label = HtmlHelper.getElement("label", { "class": "control-label", "for": id }, title);
+		var controlsDiv = HtmlHelper.getElement("div", { "class": "controls" });
+		var select = HtmlHelper.getElement("select", { "id": id, "name": id });
+		var options = [
+                        HtmlHelper.getElement("option", { "value": "0" }, "ASP XML"),
+                        HtmlHelper.getElement("option", { "value": "1" }, "Альтернативный"),
+                        HtmlHelper.getElement("option", { "value": "2" }, "ISO 8601")
+		];
+		for (var i = 0; i < options.length; i++) {
+			select.append(options[i]);
+		}
+		controlsDiv.append(select);
 		return [label, controlsDiv];
 	}
 };
@@ -104,7 +122,7 @@ RenderFormHelper = {
 	    }
 	},
     renderDateFormatContainer_content: function() {
-        var content = FilterCreator.getContentInputFilter("dateFormatSelect", "Формат даты:", "");
+    	var content = FilterCreator.getContentSelectFilter("dateFormatSelect", "Формат даты:");
         for (var i = 0; i < content.length; i++) {
             $("#dateFormatSelect_container").append(content[i]);
         }
