@@ -1,6 +1,11 @@
 ﻿@{
     ViewBag.Title = "Methods";
     Layout = "~/Views/Shared/_Layout.cshtml";
+	AjaxOptions ajaxOptions=new AjaxOptions()
+								{
+									HttpMethod = "POST",
+									UpdateTargetId = "response_container"
+								};
 }
 <style type="text/css">
    FIELDSET {
@@ -8,7 +13,7 @@
    }
 </style>
 <h2>Methods</h2>
-@using (Html.BeginForm("Methods","Home",FormMethod.Post, new {@class="form-horizontal", id="MainForm"}))
+@using (Ajax.BeginForm("GetResponse","Home",ajaxOptions))
 {
         <div class="control-group" id="methodSelect_container">
             <label class="control-label" for="methodSelect">Метод:</label>
@@ -85,10 +90,7 @@
         </div>
     </div>
 	<!-- КОНТЕКСТНО ЗАВИСИМЫЕ HTML ЕЛЕМЕНТЫ КОНЕЦ -->
-	<div class="response_container">
-		<p>URL запроса:</p>
-		<textarea cols="30">
-				
-		</textarea>
+	<div id="response_container" class="response_container">
+		
 	</div>
 }
